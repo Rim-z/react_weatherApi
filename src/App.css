@@ -1,110 +1,43 @@
-.app {
-  height: 100%;
-  width: 100%;
-  font-family: "Raleway";
-}
-body {
-  background-color: #9ccef4;
-  margin: 0px;
-}
-
-.appnavbar {
-  background-color: #759eda;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1em;
-  height: 50px;
-}
-
-.appnavbarinput {
-  background-color: #759eda;
-  color: #fff;
-  padding: 0.5em 1em;
-  border: none;
-  outline: none;
-}
-
-.appnavbarbutton {
-  background-color: #5879c7;
-  padding: 0.5em 4em;
-  border: none;
-  color: black;
-}
-
-.appmain {
-  background-color: #9ccef4;
-  display: flex;
+#error--input {
+  position: fixed;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 98%;
+  height: 40%;
+  top: 1%;
+  left: 50%;
+  transform: translate(-50%);
   flex-direction: column;
-  align-items: center;
-}
-
-.appmainweather {
-  padding: 2em;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: 0 auto;
-}
-.app-center-weather img {
-  width: 10%;
-}
-.app-center-weather {
-  text-align: center;
-}
-.appcenterweather div {
-  margin: 5px;
-}
-
-#hours {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 8%;
-  font-weight: bold;
-}
-
-#hours img {
-  width: 80px;
-  height: 80px;
-}
-
-#hours p {
-  font-size: 1.2rem;
-  margin-left: 20px;
-}
-
-.appcenterweatherdetails {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.app-Navbar-weatherdetails div {
-  margin: auto 0.5em;
-}
-
-.app-Navbar-weather-list {
-  display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-}
-.app-Navbar-weather-listweather-element {
+  align-items: center;
+  box-shadow: 2px 2px 15px black;
+  border-radius: 10px;
   text-align: center;
-  margin: 1em;
-  width: 5em;
+  animation: errorInput 0.5s;
 }
 
-#root > div > div.app-Navbar-weather > img {
-  margin: 0 auto;
-  width: 10%;
+@keyframes errorInput {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.football {
-  display: flex;
-  padding-left: 59em;
-  font-size: 14px;
-  padding-top: 15px;
+#error--input h2 {
+  font-size: xx-large;
+  margin-bottom: 1rem;
 }
 
-#root > div > div.app-Navbar-weather > h3 {
-  color: white;
+#error--input button {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px black;
+  border-radius: 5px;
+  font-size: x-large;
+  align-self: flex-end;
 }
